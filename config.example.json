@@ -1,0 +1,115 @@
+# Deep Reconnaissance Tool - Configuration Example
+# This file shows available customization options
+# Copy to config.json and modify as needed
+
+{
+  "scan_settings": {
+    "max_workers": 10,
+    "timeout_general": 300,
+    "timeout_port_scan": 600,
+    "timeout_web_scan": 300,
+    "timeout_vuln_scan": 900
+  },
+  
+  "subdomain_settings": {
+    "enabled": true,
+    "max_subdomains": 100,
+    "timeout": 180,
+    "sources": ["passive"],
+    "resolvers": "default"
+  },
+  
+  "port_scan_settings": {
+    "enabled": true,
+    "scan_type": "syn",
+    "top_ports": 1000,
+    "max_targets": 5,
+    "scan_speed": "T4",
+    "detect_versions": true
+  },
+  
+  "web_discovery_settings": {
+    "enabled": true,
+    "protocols": ["https", "http"],
+    "max_targets": 10,
+    "directory_bruteforce": true,
+    "web_crawling": true,
+    "max_crawl_depth": 3,
+    "follow_redirects": true,
+    "check_robots_txt": true,
+    "check_sitemap": true
+  },
+  
+  "directory_bruteforce_settings": {
+    "enabled": true,
+    "wordlist": "/usr/share/wordlists/dirb/common.txt",
+    "threads": 50,
+    "status_codes": [200, 204, 301, 302, 307, 401, 403],
+    "timeout": 180,
+    "extensions": [".php", ".html", ".asp", ".aspx", ".jsp"]
+  },
+  
+  "vulnerability_scan_settings": {
+    "enabled": true,
+    "nuclei_enabled": true,
+    "nuclei_severities": ["critical", "high", "medium", "low"],
+    "nikto_enabled": true,
+    "max_targets": 10,
+    "timeout": 600
+  },
+  
+  "ssl_analysis_settings": {
+    "enabled": true,
+    "check_certificate": true,
+    "check_ciphers": true,
+    "check_protocols": true,
+    "max_targets": 5
+  },
+  
+  "technology_detection_settings": {
+    "enabled": true,
+    "tools": ["whatweb"],
+    "aggressive_mode": false
+  },
+  
+  "output_settings": {
+    "base_directory": "recon_results",
+    "create_json": true,
+    "create_html": true,
+    "save_raw_output": true,
+    "compress_results": false
+  },
+  
+  "reporting_settings": {
+    "include_screenshots": false,
+    "severity_levels": {
+      "critical": {"color": "#dc3545", "priority": 1},
+      "high": {"color": "#fd7e14", "priority": 2},
+      "medium": {"color": "#ffc107", "priority": 3},
+      "low": {"color": "#28a745", "priority": 4},
+      "info": {"color": "#17a2b8", "priority": 5}
+    }
+  },
+  
+  "rate_limiting": {
+    "enabled": false,
+    "requests_per_second": 10,
+    "concurrent_connections": 50
+  },
+  
+  "exclusions": {
+    "domains": [],
+    "ip_ranges": [],
+    "ports": [],
+    "paths": []
+  },
+  
+  "advanced_options": {
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+    "dns_resolvers": ["8.8.8.8", "1.1.1.1"],
+    "proxy_enabled": false,
+    "proxy_url": "",
+    "verify_ssl": true,
+    "follow_scope": true
+  }
+}

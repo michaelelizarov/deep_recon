@@ -1,0 +1,12 @@
+# Target List for Batch Scanning
+# One target per line
+# Lines starting with # are comments and will be ignored
+
+# Example domains (educational purposes only)
+# Uncomment and add your authorized targets below
+
+# example.com
+# testphp.vulnweb.com
+# demo.testfire.net
+
+# Add your targets here:

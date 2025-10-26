@@ -1,0 +1,12 @@
+# Python Requirements for Deep Reconnaissance Tool
+# Install with: pip3 install -r requirements.txt --break-system-packages
+
+# Core dependencies (minimal, as we use external tools)
+requests>=2.31.0
+urllib3>=2.0.0
+
+# Optional: for enhanced features
+sslyze>=5.0.0  # SSL/TLS analysis (can also be installed via pip)
+
+# Note: Most tools are Go-based and installed separately
+# See install.sh or README.md for complete installation instructions
