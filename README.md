@@ -70,7 +70,7 @@ This tool is designed for security professionals, penetration testers, and bug b
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/deep-recon-tool.git
+git clone https://github.com/michaelelizarov/deep-recon-tool.git
 cd deep-recon-tool
 
 # Run the automated installer
