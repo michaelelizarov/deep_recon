@@ -322,7 +322,7 @@ Perfect for showcasing your skills in security engineering, Python development, 
 
 **Version:** 2.0.0  
 **Last Updated:** October 2025  
-**Maintained by:** [Your Name]
+**Maintained by:** Michael Elizarov
 
 ---
 
